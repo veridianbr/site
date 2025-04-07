@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can be added below this line */
+
+/* Add global background color */
+@layer base {
+    body {
+      @apply bg-primary-300 text-primary-100; /* Light mode default */
+    }
+  
+    .dark body {
+      @apply bg-primary-100 text-white; /* Dark mode */
+    }
+  }
+
+/* Custom styles can be added below this line */
+@layer components {
+  .outline-hover-effect {
+    @apply relative;
+  }
+  
+  .outline-hover-effect::after {
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 ease-in-out;
+  }
+  
+  .outline-hover-effect:hover::after {
+    @apply w-full;
+  }
+}
