@@ -1,8 +1,8 @@
 import React from 'react';
-
+``
 const Contact = () => {
     return (
-        <section className="bg-gray-100 p-8">
+        <section className=" p-8">
             <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
             <form className="bg-white p-6 rounded shadow-md">
                 <div className="mb-4">

@@ -12,7 +12,7 @@ const Header = () => {
     };
     
     return (
-        <header className={`flex justify-between items-center p-4 ${isDarkMode ? 'bg-primary-100 text-white' : 'bg-primary-300 text-primary-100'}`}>
+        <header className={`flex select-none justify-between items-center p-4 ${isDarkMode ? 'bg-primary-100 text-white' : 'bg-primary-300 text-primary-100'}`}>
             <h1 className="text-4xl font-bold">Lucas 
                 <span className="text-5xl bg-primary-500 text-transparent bg-clip-text transform -translate-y-1">.</span>
             </h1>
