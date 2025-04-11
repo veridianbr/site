@@ -1,10 +1,25 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
+    const { isDarkMode } = useContext(ThemeContext);
+    
     return (
-        <div className="flex flex-col min-h-screen">
-            <main className="flex-grow px-4 md:px-8 lg:px-16 w-full">
+        <div className="flex w-full">
+            {/* Fixed width sidebar */}
+            <aside className="fixed top-0 left-0 h-full z-10">
+                <Sidebar />
+            </aside>
+            
+            <main className={`
+                ml-32
+                flex-1
+                min-h-screen
+                snap-y snap-mandatory 
+                h-screen overflow-y-scroll
+                ${isDarkMode ? 'bg-dark text-white' : 'bg-light text-lightMode-100'}
+            `}>
                 {children}
             </main>
         </div>

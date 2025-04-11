@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const About = () => {
+    const { isDarkMode, language } = useContext(ThemeContext);
     return (
-        <section className="py-10 px-5">
-            <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="text-lg">
-                I am a passionate developer with experience in building dynamic and responsive web applications. 
-                My journey in tech began with a fascination for problem-solving and a desire to create impactful solutions.
-            </p>
-            <p className="text-lg mt-4">
-                I specialize in front-end development, utilizing modern frameworks and libraries to deliver seamless user experiences. 
-                I am always eager to learn new technologies and improve my skills.
-            </p>
+        <section className={`
+            px-20
+            snap-start 
+            flex flex-col items-center h-screen
+            w-full
+            pt-64
+            ${isDarkMode ? 'bg-dark text-lightMode-200' : 'bg-light text-lightMode-100'}
+        `}>
+            <h2 className="text-2xl text-center md:text-5xl font-bold leading-relaxed mb-8 max-w-5xl bg-gradient-to-r from-darkMode-500 to-lightMode-100/90 bg-clip-text text-transparent">
+                {language === 'en' ? 'About me' : 'Sobre mim'}
+            </h2>
+
+            <div className="flex flex-col items-center justify-center">
+                
+                {/* Uncomment and update your content paragraph */}
+                <p className="text-lg text-center max-w-4xl mb-8">
+                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero vitae autem laboriosam rerum ipsam pariatur non nam ut molestiae maxime, velit est illum esse ratione mollitia doloribus! Assumenda, similique quisquam.
+                </p>
+            </div>
         </section>
     );
 };
