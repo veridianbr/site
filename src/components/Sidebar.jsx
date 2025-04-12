@@ -21,11 +21,12 @@ const Sidebar = () => {
             targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     };
-    
+    //bg-lightMode-200
     return (
-        <aside className={`select-none fixed top-0 left-0 h-full w-64 z-10 flex flex-col border-r-2 border-lightMode-200 ${isDarkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
+        <aside className={`select-none fixed top-0 left-0 h-full w-64 z-10 flex flex-col border-r-2 ${isDarkMode ? 'border-darkMode-500' : 'border-lightMode-200'}
+          ${isDarkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
                 <div className="p-6">
-                    <h1 className="text-4xl font-bona inline-block bg-lightMode-200 px-2 py-1 rounded">Lucas.
+                    <h1 className={`text-4xl font-bona inline-block ${isDarkMode ? 'bg-darkMode-300 text-darkMode-400' : 'bg-lightMode-200 text-lightMode-100'} px-2 py-1 rounded`}>Lucas.
                 </h1>
             </div>
             
@@ -59,7 +60,7 @@ const Sidebar = () => {
                         </a>
                     </li>
                 </ul>
-            <hr className="my-6 border-lightMode-200" />   
+            <hr className={`my-6 ${isDarkMode ? 'border-darkMode-500' : 'border-lightMode-200'}`} />   
 
              {/* Skill categories */}
             <div className="space-y-6">
@@ -104,7 +105,8 @@ const Sidebar = () => {
                     </ul>
                 </div>
             </div>
-            <hr className="my-6 border-lightMode-200" />   
+            <hr className={`my-6 ${isDarkMode ? 'border-darkMode-500' : 'border-lightMode-200'}`} />   
+
             
             <div>
                 <h3 className="text-sm font-light mb-3 px-2 text-lightMode-300 tracking-wider">

@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
                 ml-32
                 flex-1
                 min-h-screen
-                snap-y snap-mandatory 
+                
                 h-screen overflow-y-scroll
                 ${isDarkMode ? 'bg-dark text-white' : 'bg-light text-lightMode-100'}
             `}>
@@ -27,3 +27,5 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
+//snap-y snap-mandatory 
