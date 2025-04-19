@@ -7,11 +7,11 @@
 /* Add global background color */
 @layer base {
     body {
-      @apply bg-light text-lightMode-100; /* Light mode default */
+      @apply bg-lightMode-100 text-lightMode-300; /* Light mode default */
     }
   
     .dark body {
-      @apply bg-dark text-white; /* Dark mode */
+      @apply bg-darkMode-200 text-darkMode-200; /* Dark mode */
     }
   }
 

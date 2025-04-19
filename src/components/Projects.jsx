@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const projects = [
   {
@@ -22,8 +23,13 @@ const projects = [
 ];
 
 const Projects = () => {
+      const { isDarkMode, language } = useContext(ThemeContext);
+
+  
   return (
-    <section className="py-10">
+    <section className={`py-10" id="projects
+    ${isDarkMode ? 'bg-darkMode-100 text-lightMode-200' : 'bg-light text-lightMode-100'}
+    `}>
       <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (

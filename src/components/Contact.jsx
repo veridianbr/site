@@ -1,10 +1,17 @@
-import React from 'react';
-``
+
+import React, { useContext, useState, useEffect } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 const Contact = () => {
+    const { isDarkMode, language } = useContext(ThemeContext);
     return (
-        <section className=" p-8">
+        
+
+        <section className={
+            `p-8
+            ${isDarkMode ? 'bg-darkMode-100 text-lightMode-400' : 'bg-darkMode-300 text-lightMode-100'}`
+        }>
             <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-            <form className="bg-white p-6 rounded shadow-md">
+            <form className="bg-darkMode-100 p-6 rounded shadow-md">
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700" htmlFor="name">Name</label>
                     <input
@@ -34,7 +41,7 @@ const Contact = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white font-bold py-2 rounded hover:bg-blue-600"
+                    className="w-full bg-darkMode-300 text-white font-bold py-2 rounded hover:bg-blue-600"
                 >
                     Send Message
                 </button>
