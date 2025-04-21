@@ -16,16 +16,18 @@ const Layout = ({ children }) => {
                 ml-32
                 flex-1
                 min-h-screen
-                
                 h-screen overflow-y-scroll
+                snap-y snap-mandatory
                 ${isDarkMode ? 'bg-dark text-white' : 'bg-light text-lightMode-100'}
             `}>
-                {children}
+                {React.Children.map(children, (child) => (
+                    <section className="h-screen snap-start">
+                        {child}
+                    </section>
+                ))}
             </main>
         </div>
     );
 };
 
 export default Layout;
-
-//snap-y snap-mandatory 

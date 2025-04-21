@@ -12,8 +12,19 @@ const About = () => {
     >
       <div className="max-w-4xl mx-auto">
         <h2 
-          className={`text-4xl md:text-5xl font-bold mb-8 
-            ${isDarkMode ? "text-darkMode-400" : "text-lightMode-400"}`}
+          className={`
+            text-2xl text-center 
+            md:text-5xl
+            font-bold
+            leading-relaxed
+            mb-20
+            bg-gradient-to-r 
+            ${isDarkMode 
+                ? 'from-darkMode-400 to-darkMode-500' // Gradiente mais claro para modo escuro
+                : 'from-lightMode-400/80 to-lightMode-300/50' // Gradiente original para modo claro
+            }
+            bg-clip-text text-transparent
+            transition-all transform `}
         >
           {language === "en" ? "About Me" : "Sobre Mim"}
         </h2>

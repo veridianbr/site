@@ -44,8 +44,8 @@ const Sidebar = () => {
         <h1
           className={`text-4xl font-bona inline-block ${
             isDarkMode
-              ? "bg-darkMode-300 text-darkMode-400"
-              : "bg-lightMode-200 text-lightMode-100"
+              ? "bg-darkMode-300 text-darkMode-200"
+              : "bg-lightMode-100 text-lightMode-300"
           } px-2 py-1 rounded`}
         >
           Lucas.

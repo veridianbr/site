@@ -76,7 +76,7 @@ const Hero = () => {
                     bg-gradient-to-r 
                     ${isDarkMode 
                         ? 'from-darkMode-400 to-darkMode-500' // Gradiente mais claro para modo escuro
-                        : 'from-darkMode-500 to-lightMode-100/90' // Gradiente original para modo claro
+                        : 'from-lightMode-400/80 to-lightMode-300/50'// Gradiente original para modo claro
                     }
                     bg-clip-text text-transparent
                     transition-all transform 

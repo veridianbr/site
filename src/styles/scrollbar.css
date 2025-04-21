@@ -1,0 +1,48 @@
+/* Custom scrollbar styling */
+.custom-scrollbar {
+  position: relative;
+  /* Add padding to push scrollbar to vertical center */
+  padding-bottom: calc(33vw * 0.3); /* Half of your card height */
+  margin-bottom: -calc(33vw * 0.3); /* Compensate for padding */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  width: 66vw; /* Match project card width */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  width: 66vw;
+  margin: 0 auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Dark mode version */
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Light mode version */
+.light-scrollbar::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+
+/* Hover effects */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Scrollbar container alignment */
+.scroll-container-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
