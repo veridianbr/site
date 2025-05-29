@@ -34,7 +34,7 @@ const Projects = () => {
   return (
     <section
       className={
-        `py-20 h-full flex flex-col` +
+        `py-12 sm:py-20 h-full flex flex-col` +
         ` ${
           isDarkMode
             ? "bg-darkMode-100 text-lightMode-200"
@@ -44,25 +44,25 @@ const Projects = () => {
     >
       <h2
         className={`
-        text-2xl text-center 
-            md:text-5xl
-            font-bold
-            leading-relaxed
-            mb-20
-            bg-gradient-to-r 
-            ${
-              isDarkMode
-                ? "from-darkMode-400 to-darkMode-500" // Gradiente mais claro para modo escuro
-                : "from-lightMode-400/80 to-lightMode-300/50" // Gradiente original para modo claro
-            }
-            bg-clip-text text-transparent
-            transition-all transform `}
+        text-xl sm:text-2xl md:text-4xl lg:text-5xl
+        text-center 
+        font-bold
+        leading-relaxed
+        mb-12 sm:mb-20
+        bg-gradient-to-r 
+        ${
+          isDarkMode
+            ? "from-darkMode-400 to-darkMode-500"
+            : "from-lightMode-400/80 to-lightMode-300/50"
+        }
+        bg-clip-text text-transparent
+        transition-all transform `}
       >
         Projects
       </h2>
 
       {/* Horizontal scrolling container */}
-      <div className="flex-1 flex items-center px-4 md:px-10">
+      <div className="flex-1 flex items-center px-2 sm:px-4 md:px-10">
         <div className="scroll-container-wrapper relative">
           <div
             className={`
@@ -72,14 +72,16 @@ const Projects = () => {
             }
           `}
           >
-            <div className="flex gap-6 min-w-max px-[calc(50vw-33vw)] pb-4">
+            <div className="flex gap-4 sm:gap-6 min-w-max px-[5vw] sm:px-[calc(50vw-40vw)] md:px-[calc(50vw-33vw)] pb-4">
               {projects.map((project) => (
                 <div
                   key={project.id}
                   className={`
                     flex flex-col justify-between
-                    w-[66vw] h-[calc(66vw*0.6)] max-h-[500px] flex-shrink-0
-                    rounded-xl p-6
+                    w-[80vw] sm:w-[75vw] md:w-[66vw] 
+                    h-[60vh] sm:h-[calc(66vw*0.6)] max-h-[500px] 
+                    flex-shrink-0
+                    rounded-xl p-4 sm:p-6
                     ${
                       isDarkMode
                         ? "bg-darkMode-100 border-darkMode-400 hover:scale-[0.98]"
@@ -92,11 +94,11 @@ const Projects = () => {
                   `}
                 >
                   <div>
-                    <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
                       {project.title}
                     </h3>
                     <p
-                      className={`${
+                      className={`text-sm sm:text-base ${
                         isDarkMode ? "text-gray-300" : "text-gray-700"
                       }`}
                     >
@@ -105,12 +107,12 @@ const Projects = () => {
                   </div>
 
                   {/* Button container */}
-                  <div className="flex gap-4 mt-4 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 justify-center">
                     {/* Deploy button */}
                     <a
                       href={project.deployLink}
                       className={`
-                        px-4 py-2 rounded-lg text-center
+                        px-4 py-2 rounded-lg text-center text-sm sm:text-base
                         ${
                           isDarkMode
                             ? "bg-darkMode-200 text-white hover:bg-darkMode-500"
@@ -128,7 +130,7 @@ const Projects = () => {
                     <a
                       href={project.githubLink}
                       className={`
-                        px-4 py-2 rounded-lg text-center border
+                        px-4 py-2 rounded-lg text-center border text-sm sm:text-base
                         ${
                           isDarkMode
                             ? "border-darkMode-400 text-gray-300 hover:bg-darkMode-300"

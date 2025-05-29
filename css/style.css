@@ -1,0 +1,53 @@
+/* 
+  Assume .main-panel is the container with the black background 
+  that spans from the sidebar to the right edge of the screen,
+  and contains the date/time element.
+*/
+.main-panel {
+  /* ... existing styles for the main panel ... */
+  /* e.g., background-color: #000; padding: 20px 40px; position: relative; flex-grow: 1; */
+  display: flex; /* Make main-panel a flex container */
+  flex-direction: column; /* Stack its children vertically */
+}
+
+/* 
+  Assume .content-block is the element directly containing 
+  the text "Lucas is a Software Engineer..." and the button.
+*/
+.content-block {
+  /* 
+    If there's a max-width or fixed width causing the restriction,
+    like 'max-width: 800px;' or 'width: 70%;',
+    the following lines will override it.
+  */
+  width: 100%; /* Makes the content block use the full width of its parent (.main-panel's content box) */
+  max-width: none; /* Removes any maximum width restriction */
+
+  /* Added styles for centering content within this block */
+  display: flex;
+  flex-direction: column; /* Stack children (e.g., paragraph, button) vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  text-align: center; /* Center text within child elements like paragraphs */
+
+  flex-grow: 1; /* Allow content-block to grow and fill available vertical space in main-panel */
+  /* For vertical centering with justify-content: center to be effective,
+     .content-block needs to have a height greater than its content.
+     This could be achieved if .content-block takes up available vertical space 
+     within .main-panel (e.g., with 'height: 100%;' or 'flex-grow: 1;' 
+     if .main-panel is a flex container and .content-block is a flex item). */
+
+  /* You might need to adjust padding or margins here if this change affects spacing too much */
+}
+
+/* 
+  Ensure the date/time display remains correctly positioned.
+  If it's absolutely positioned relative to .main-panel, it should be fine.
+  Example:
+*/
+.datetime-display {
+  /* position: absolute; */
+  /* top: 20px; */
+  /* right: 40px; */ /* Should align with .main-panel's right padding */
+  /* ... other existing styles ... */
+}
