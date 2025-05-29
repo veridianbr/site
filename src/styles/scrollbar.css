@@ -49,3 +49,25 @@
   margin: 0 auto;
   width: 100%;
 }
+
+/* Hide main browser scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Optional: If body doesn't work, try html or both */
+/*
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*/

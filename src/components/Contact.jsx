@@ -40,6 +40,7 @@ const Contact = () => {
     <section
       id="contact"
       className={`p-4 sm:p-8 min-h-screen flex flex-col justify-center
+            overflow-y-auto custom-scrollbar ${/* Added overflow-y-auto and custom-scrollbar */ ''}
             ${
               isDarkMode
                 ? "bg-darkMode-100 text-lightMode-400"
@@ -83,11 +84,11 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={`group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:scale-105
-                                ${
-                                  isDarkMode
-                                    ? "bg-darkMode-200 border-darkMode-500 hover:border-darkMode-400"
-                                    : "bg-white border-lightMode-200 hover:border-lightMode-300"
-                                } hover:shadow-lg`}
+                               ${
+                        isDarkMode
+                          ? "bg-darkMode-200 border-darkMode-500 hover:border-darkMode-400/70"
+                          : "bg-white text-black border-lightMode-200 shadow-lg hover:border-lightMode-300/15"
+                      }  hover:shadow-lg`}
             >
               <div className="flex items-center space-x-3 sm:space-x-4">
                 <div

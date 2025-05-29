@@ -40,7 +40,8 @@ const Projects = () => {
             ? "bg-darkMode-100 text-lightMode-200"
             : "bg-light text-lightMode-100"
         }`
-      }
+      } 
+      id="projects"
     >
       <h2
         className={`
@@ -82,11 +83,11 @@ const Projects = () => {
                     h-[60vh] sm:h-[calc(66vw*0.6)] max-h-[500px] 
                     flex-shrink-0
                     rounded-xl p-4 sm:p-6
-                    ${
-                      isDarkMode
-                        ? "bg-darkMode-100 border-darkMode-400 hover:scale-[0.98]"
-                        : "bg-light border-lightMode-400 hover:scale-[0.98]"
-                    }
+                     ${
+                        isDarkMode
+                          ? "bg-darkMode-200 border-darkMode-500 hover:border-darkMode-400/70"
+                          : "bg-white text-black border-lightMode-200 shadow-lg hover:border-lightMode-300/15"
+                      } 
                     border
                     cursor-pointer
                     transition-all duration-300 hover:shadow-lg

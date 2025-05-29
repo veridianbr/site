@@ -61,9 +61,7 @@ const Sidebar = ({ isOpen, onClose }) => {
   const getLiClass = (sectionId) => `
     px-2 py-1 inline-block transition-all duration-200 
     pl-4 relative
-    ${activeSection === sectionId 
-      ? 'text-white font-medium' // Cor branca para seção ativa
-      : (isDarkMode ? 'text-darkMode-300 hover:text-darkMode-400' : 'text-lightMode-300 hover:text-lightMode-400')}`;
+    ${isDarkMode ? 'text-darkMode-300 hover:text-darkMode-400' : 'text-lightMode-300 hover:text-lightMode-400'}`;
 
   // Add smooth scroll handler
   const handleNavClick = (e) => {
@@ -227,22 +225,25 @@ const Sidebar = ({ isOpen, onClose }) => {
             <ul className="space-y-2 text-base">
               <li className="opacity-80 hover:opacity-100 transition-opacity">
                 <a
-                  href="#email"
+                  href="#contact"
                   onClick={handleNavClick}
                   className={getLiClass('email')}
                 >
                   {language === "en" ? "Email" : "Email"}
                 </a>
               </li>
-              <li className="opacity-80 hover:opacity-100 transition-opacity">
+
+               <li className="opacity-80 hover:opacity-100 transition-opacity">
                 <a
-                  href="#form"
-                  onClick={handleNavClick}
-                  className={getLiClass('form')}
+                  href="https://github.com/Luucasgontijo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={getLiClass('github')}
                 >
-                  {language === "en" ? "Contact Form" : "Formulário"}
+                  Github
                 </a>
               </li>
+              
               <li className="opacity-80 hover:opacity-100 transition-opacity">
                 <a
                   href="https://linkedin.com/in/yourprofile"
