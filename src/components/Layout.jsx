@@ -29,7 +29,6 @@ const Layout = ({ children }) => {
                 flex-1
                 min-h-screen
                 h-screen overflow-y-scroll
-                snap-y snap-mandatory
                 pt-16 md:pt-0
                 ${
                   isDarkMode

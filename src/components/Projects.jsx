@@ -86,7 +86,7 @@ const Projects = () => {
                      ${
                         isDarkMode
                           ? "bg-darkMode-200 border-darkMode-500 hover:border-darkMode-400/70"
-                          : "bg-white text-black border-lightMode-200 shadow-lg hover:border-lightMode-300/15"
+                          : "bg-white text-black border-lightMode-200 shadow-lg hover:border-lightMode-300/10"
                       } 
                     border
                     cursor-pointer
