@@ -19,7 +19,7 @@ const Header = ({ onToggleSidebar, isSidebarOpen }) => {
                 ${isDarkMode ? "text-darkMode-400" : "text-lightMode-400"}
             `}
       >
-        Lucas.
+        Veridian
       </h1>
 
       {/* Hamburger Menu Button */}

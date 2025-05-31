@@ -99,35 +99,18 @@ const Hero = () => {
           style={{ transitionDuration: "1800ms" }}
         >
           {language === "en"
-            ? "Lucas is a Software Engineer with a strong focus on Artificial Intelligence and chatbot development. He also brings solid experience in full-stack development, allowing him to build robust and scalable applications from end to back end."
-            : "Lucas é um Engenheiro de Software com forte foco em Inteligência Artificial e desenvolvimento de chatbots. Ele também possui sólida experiência em desenvolvimento fullstack, o que lhe permite construir aplicações robustas e escaláveis de ponta a ponta."}
+            ? "Veridian, founded in 2024 by two entrepreneurial prodigies, specializes in cutting-edge AI automations, primarily for WhatsApp. We've successfully developed over 20 automations in the past year, helping businesses streamline communication and enhance efficiency."
+            : "A Veridian, fundada em 2024 por dois jovens empreendedores prodígios, é especializada em automações de IA de ponta, principalmente para WhatsApp. Desenvolvemos com sucesso mais de 20 automações no último ano, ajudando empresas a otimizar a comunicação e aumentar a eficiência."}
         </p>
 
         <div className="mt-6 flex justify-center">
           <a
-            href="#projects"
+            href="#about" // Changed from #projects to #about
             onClick={(e) => {
               e.preventDefault();
-              // Find the next section that's a snap point
-              const sections = document.querySelectorAll("section");
-              const currentSection = e.target.closest("section");
-              let nextSection = null;
-
-              // Find the current section's index
-              let foundCurrent = false;
-              for (const section of sections) {
-                if (foundCurrent) {
-                  nextSection = section;
-                  break;
-                }
-                if (section === currentSection) {
-                  foundCurrent = true;
-                }
-              }
-
-              // Scroll to the next section
-              if (nextSection) {
-                nextSection.scrollIntoView({
+              const targetElement = document.getElementById("about"); // Target "about" section
+              if (targetElement) {
+                targetElement.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 });
@@ -146,7 +129,7 @@ const Hero = () => {
                         `}
             style={{ transitionDuration: "2300ms" }}
           >
-            {language === "en" ? "Get to know me" : "Conheça-me"}
+            {language === "en" ? "Learn More About Us" : "Saiba Mais Sobre Nós"}
           </a>
         </div>
       </div>

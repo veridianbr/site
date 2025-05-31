@@ -1,46 +1,49 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   const { isDarkMode, language } = useContext(ThemeContext);
 
   const contactInfo = [
-    {
-      icon: <FaWhatsapp size={24} />,
-      label: "WhatsApp",
-      value: "+55 (62) 98537-2793",
-      link: "https://wa.me/5562985372793",
-      color: "text-green-500",
-    },
+    // {
+    //   icon: <FaWhatsapp size={24} />,
+    //   label: "WhatsApp",
+    //   value: "+55 (XX) XXXXX-XXXX", // Placeholder, update with Veridian's WhatsApp if available
+    //   link: "https://wa.me/55XXXXXXXXXXX", // Placeholder
+    //   color: "text-green-500",
+    // },
     {
       icon: <FaEnvelope size={24} />,
       label: language === "en" ? "Email" : "Email",
-      value: "lucas.gontijo04@gmail.com",
-      link: "mailto:lucas.gontijo04@gmail.co",
+      value: "contato@veridian.com", // Placeholder, update with Veridian's email
+      link: "mailto:contact@veridian.com", // Placeholder
       color: "text-blue-500",
     },
     {
       icon: <FaLinkedin size={24} />,
       label: "LinkedIn",
-      value: "/in/lucas-gontijo-6887b92b3/",
-      link: "https://www.linkedin.com/in/lucas-gontijo-6887b92b3/",
+      value: "/company/veridianbr",
+      link: "https://www.linkedin.com/company/veridianbr", // Updated LinkedIn
       color: "text-blue-600",
     },
-    {
-      icon: <FaGithub size={24} />,
-      label: "GitHub",
-      value: "@Luucasgontijo",
-      link: "https://github.com/Luucasgontijo",
-      color: isDarkMode ? "text-white" : "text-gray-800",
-    },
+    // Removed GitHub, can be added if Veridian has a company GitHub
+    // {
+    //   icon: <FaGithub size={24} />,
+    //   label: "GitHub",
+    //   value: "@VeridianHub", // Example
+    //   link: "https://github.com/VeridianHub", // Example
+    //   color: isDarkMode ? "text-white" : "text-gray-800",
+    // },
   ];
 
   return (
     <section
       id="contact"
       className={`p-4 sm:p-8 min-h-screen flex flex-col justify-center
-            overflow-y-auto custom-scrollbar ${/* Added overflow-y-auto and custom-scrollbar */ ''}
+            overflow-y-auto custom-scrollbar ${
+              /* Added overflow-y-auto and custom-scrollbar */ ""
+            }
             ${
               isDarkMode
                 ? "bg-darkMode-100 text-lightMode-400"
@@ -72,8 +75,8 @@ const Contact = () => {
                     ${isDarkMode ? "text-darkMode-400" : "text-lightMode-400"}`}
         >
           {language === "en"
-            ? "Let's connect! Feel free to reach out through any of these channels."
-            : "Vamos nos conectar! Sinta-se à vontade para entrar em contato através destes canais."}
+            ? "Interested in our AI automation solutions? Let's connect! Feel free to reach out through any of these channels."
+            : "Interessado em nossas soluções de automação com IA? Vamos nos conectar! Sinta-se à vontade para entrar em contato através destes canais."}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -85,10 +88,10 @@ const Contact = () => {
               rel="noopener noreferrer"
               className={`group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:scale-105
                                ${
-                        isDarkMode
-                          ? "bg-darkMode-200 border-darkMode-500 hover:border-darkMode-400/70"
-                          : "bg-white text-black border-lightMode-200 shadow-lg hover:border-lightMode-300/15"
-                      }  hover:shadow-lg`}
+                                 isDarkMode
+                                   ? "bg-darkMode-200 border-darkMode-500 hover:border-darkMode-400/70"
+                                   : "bg-white text-black border-lightMode-200 shadow-lg hover:border-lightMode-300/15"
+                               }  hover:shadow-lg`}
             >
               <div className="flex items-center space-x-3 sm:space-x-4">
                 <div
@@ -130,8 +133,8 @@ const Contact = () => {
                         }`}
           >
             {language === "en"
-              ? "I usually respond within 24 horas"
-              : "Geralmente respondo em até 24 hours"}
+              ? "We typically respond within 24 business hours."
+              : "Geralmente respondemos em até 24 horas úteis."}
           </p>
         </div>
       </div>

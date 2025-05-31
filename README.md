@@ -1,30 +1,28 @@
-# Developer Portfolio
+# Veridian Company Website
 
-This is a developer portfolio built using React, Vite, and Tailwind CSS. The portfolio showcases the developer's skills, projects, and provides contact information.
+This is the official website for Veridian, a company specializing in AI automations, particularly for WhatsApp. Built using React, Vite, and Tailwind CSS, the site showcases Veridian's services, mission, and contact information.
 
 ## Project Structure
 
 The project is organized as follows:
 
 ```
-developer-portfolio
+veridian-site
 ├── src
 │   ├── assets
-│   │   └── images          # Directory for image assets
+│   │   └── images          # Directory for image assets (if any)
 │   ├── components          # Reusable components
-│   │   ├── About.jsx      # About section
-│   │   ├── Contact.jsx    # Contact form
-│   │   ├── Footer.jsx     # Footer content
-│   │   ├── Header.jsx     # Navigation and title
+│   │   ├── About.jsx      # About Veridian section
+│   │   ├── Contact.jsx    # Contact information
+│   │   ├── Header.jsx     # Navigation and title (mobile)
 │   │   ├── Hero.jsx       # Introduction section
 │   │   ├── Layout.jsx     # Layout wrapper
-│   │   ├── Projects.jsx    # Projects listing
-│   │   └── Skills.jsx     # Skills highlight
+│   │   └── Sidebar.jsx    # Sidebar navigation
 │   ├── pages              # Page components
-│   │   ├── HomePage.jsx   # Main landing page
-│   │   └── ProjectDetail.jsx # Detailed project view
+│   │   └── HomePage.jsx   # Main landing page
 │   ├── styles             # Styles directory
 │   │   └── index.css      # Tailwind CSS and custom styles
+│   ├── context            # React Context (e.g., ThemeContext)
 │   ├── App.jsx            # Main application component
 │   └── main.jsx           # Entry point of the application
 ├── index.html             # Main HTML file
@@ -40,31 +38,35 @@ developer-portfolio
 To get started with this project, follow these steps:
 
 1. **Clone the repository:**
+
    ```
    git clone <repository-url>
-   cd developer-portfolio
+   cd veridian-site
    ```
 
 2. **Install dependencies:**
+
    ```
    npm install
    ```
 
 3. **Run the development server:**
+
    ```
    npm run dev
    ```
 
 4. **Open your browser:**
-   Navigate to `http://localhost:3000` to view the portfolio.
+   Navigate to `http://localhost:3000` (or the port specified by Vite) to view the site.
 
 ## Features
 
 - Responsive design using Tailwind CSS
-- Dynamic routing with React Router
-- Components for each section of the portfolio
-- Custom styles and themes
+- Dynamic routing with React Router (for potential future expansion)
+- Components for each section of the site
+- Dark/Light mode theme
+- Multilingual support (EN/PT)
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is proprietary to Veridian.

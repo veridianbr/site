@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
-import ProjectDetail from "./pages/ProjectDetail";
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
           <div className="h-screen overflow-y-scroll ">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/project/:id" element={<ProjectDetail />} />
             </Routes>
           </div>
         </Layout>
